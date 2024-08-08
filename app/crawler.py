@@ -51,6 +51,7 @@ class GithubCrawler:
 
         except Exception as exception:
             logger.exception(f"Exception while _get({endpoint}, params={params}): {exception}")
+            raise
 
     async def _search_on_github(self, keywords: List[str], search_type: SearchType) -> str:
         query = "+".join(keywords)

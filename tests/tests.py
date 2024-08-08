@@ -13,11 +13,11 @@ class TestGithubCrawler(unittest.IsolatedAsyncioTestCase):
         self.search_type = SearchType.REPOSITORY
 
         # Mock Response of list items
-        with open(os.path.join("data", "repositories_list.html")) as content_file:
+        with open(os.path.join("tests", "data", "repositories_list.html")) as content_file:
             self.response_list = content_file.read()
 
         # Mock Response of single id
-        with open(os.path.join("data", "single_repository.html")) as content_file:
+        with open(os.path.join("tests", "data", "single_repository.html")) as content_file:
             self.response_repository = content_file.read()
 
     @staticmethod
